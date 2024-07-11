@@ -25,7 +25,17 @@ Example 3:
 
 ***********************************************************************/
 
-// Your code here 
+let coinCollector = numCoins => {
+  let coinArr = [];
+  const popCoinArr = coinValue => {
+    coinArr.push(coinValue);
+    if (coinArr.length < numCoins) return popCoinArr;
+    else return coinArr;
+  }
+  return popCoinArr;
+  // if (coinArr.length < numCoins) return coinValue => coinArr.push(coinValue)
+  // else return coinArr;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

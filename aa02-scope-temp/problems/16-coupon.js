@@ -15,7 +15,7 @@ console.log(twentyPercent([10, 20, 30])); // [ 8, 16, 24 ]
 
 ***********************************************************************/
 
-// Your code here 
+let coupon = discount => priceArr => priceArr.map(curVal => curVal * (1 - discount))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

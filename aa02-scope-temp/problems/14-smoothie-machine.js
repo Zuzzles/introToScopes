@@ -22,7 +22,10 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// Your code here 
+let smoothieMachine = (...mixIns) => {
+  let order = "I'm having a smoothie with " + mixIns.join(' and ') 
+  return (...otherMixIns) => mixIns.length === 0 && order.length <= 27 ? order += otherMixIns.reduce((orderStr, curStr) => orderStr += ` and ${curStr}`) : order += otherMixIns.reduce((orderStr, curStr) => orderStr += ` and ${curStr}`, '');
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

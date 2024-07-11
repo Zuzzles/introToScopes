@@ -13,7 +13,20 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
-// Your code here 
+let recVolume = height => {
+  let vari = 1;
+  let vol = height;
+  let mult = dim => {
+    if (vari >= 3) return vol;
+    else if (typeof dim === 'number'){
+      vol *= dim;
+      vari++;
+      if (vari >= 3) return vol;
+      return mult;
+    } else return mult;
+  }
+  return mult();
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

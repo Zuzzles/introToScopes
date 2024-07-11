@@ -43,8 +43,16 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   be useful
 ***********************************************************************/
 
-// Your code here 
-
+let curriedSum = numArgs => {
+  let argArr = [];
+  if (numArgs <= 0) return null;
+  const popCoinArr = coinValue => {
+    argArr.push(coinValue);
+    if (argArr.length < numArgs) return popCoinArr;
+    else return argArr.reduce((acc, curVal) => acc + curVal);
+  }
+return popCoinArr;
+};
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
